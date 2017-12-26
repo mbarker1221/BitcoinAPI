@@ -1,0 +1,204 @@
+body {
+   background: linear-gradient(to bottom, #d7ffc6, #fff);
+   ;
+   font-weight: 900;
+   font-size: 100%;
+   position: static;
+   background-size: cover;
+   max-width: 100%;
+   padding-left: 5px;
+   text-align: center;
+   padding-right: 5px;
+   background-repeat: no-repeat;
+   color: black;
+}
+
+nav {
+   height: 45px;
+   background-color: black;
+   margin: auto 0;
+   width: 100%;
+   padding-bottom: 10px;
+}
+
+nav li {
+   float: left;
+   width: 24.8%;
+   text-align: center;
+   margin: auto 0;
+   margin-top: -5px;
+}
+
+li a {
+   color: white;
+   font-size: 90%;
+   display: block;
+   margin: auto 0;
+}
+
+li a:hover {
+   color: red;
+   margin: auto 0;
+}
+
+.link {
+   font-size: 20px;
+}
+
+h1 {
+   margin 0 0 auto;
+   font-weight: 900;
+   font-size: 58px;
+   text-shadow: 1px 2px #8b0000;
+   font-family: Oswald Heavy;
+}
+
+h2 {
+   text-align: center;
+   font-weight: 900;
+   font-size: 50px;
+   text-shadow: 1px 1px #8b0000;
+   font-family: Oswald Heavy;
+}
+
+h3 {
+   text-align: center;
+   font-weight: 600;
+   font-size: 40px;
+   text-shadow: 1px 1px #8b0000;
+   padding-bottom: 15px;
+   font-family: Oswald Heavy;
+}
+
+h4 {
+   font-size: 45px;
+   text-shadow: 1px 1px #8b0000;
+   font-family: Oswald Heavy;
+}
+
+.subHeader {
+   margin-top: -40px;
+   font-size: 18px;
+   color: black;
+}
+
+.subHead2 {
+   font-size: 22px;
+   text-shadow: 1px 1px #007faa;
+   margin: 40px 70px;
+}
+
+.subHead3 {
+   font-size: 38px;
+   font-style: italic;
+   text-shadow: .5px 1px #8b0000;
+   text-decoration: underline;
+}
+
+table {
+   margin: 20px auto;
+   padding: 15px;
+   border-radius: 5px;
+   font-weight: 800;
+   background-color: #ffffff;
+   border: 5px solid #007fAA;
+   opacity: 0.5;
+}
+
+th {
+   padding: 20px;
+}
+
+td {
+   padding: 10px;
+}
+
+form {
+   font-weight: 800;
+   font-size: 20px;
+}
+
+fieldset {
+   border: none;
+}
+
+label {
+   font-size: 20px;
+   font-weight: 700;
+   text-shadow: 1px 1px #8b0000;
+   margin-right: 5px;
+}
+
+input {
+   margin: 20px auto;
+   text-align: center;
+   border-radius: 5px;
+   font-size: 15px;
+}
+
+input:focus {
+   background-color: #ccffa5;
+}
+
+.buttons {
+   border-radius: 5px;
+}
+
+.buttons:hover {
+   background-color: #7bbc6b;
+   color: white;
+}
+
+.firstValue {
+   font-size: 25px;
+   padding: 15px;
+   color: #8b0000;
+   text-shadow: 1px 1px black;
+}
+
+.transbox {
+   margin: 30px;
+   background-color: #ffffff;
+   opacity: 0.5;
+   filter: alpha(opacity=60);
+   border: 3px solid #007fAA;
+   outline-color: invert;
+}
+
+.buy {
+   font-size: 20px;
+   color: #8b0000;
+}
+
+.difference {
+   text-decoration: italic;
+   font-size: 20px;
+   text-shadow: 1px 1px #007faa;
+}
+
+.press {
+   font-size: 25px;
+   text-shadow: .5px;
+   text-decoration: italic;
+}
+
+.values {
+   padding-bottom: 20px;
+}
+
+.number {
+   font-size: 22px;
+   text-shadow: 1px 1px #007faa;
+   margin-top: -30px;
+}
+
+#bitcoinAmount {
+   margin-left: 15px;
+   margin-right: 15px;
+}
+
+.exchangeRates {
+   font-size: 30px;
+   color: #8b0000;
+   text-shadow: 1px 1px black;
+}

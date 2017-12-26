@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">
+   <title>repl.it</title>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css" rel="stylesheet">
+   <link href="index.css" rel="stylesheet" type="text/css">
+   <link href="https://fonts.googleapis.com/css?family=Nunito:300i" rel="stylesheet">
+   <title>Capstone Bitcoin Api for Thinkful</title>
+</head>
+
+<body>
+   <main role="main">
+
+
+      <section>
+         <nav role="navigation" class="nav-bar" id="nav-start">
+            <li><a data-page="start-page" class="menu" id="start-page" href="#">Home Page</a></li>
+            <li><a data-page="history-page" class="menu" id="history-page" href="#">Historic Data</a></li>
+            <li><a data-page="crypto-page" class="menu" id="crypto-page" href="#" onclick="fetchCryptoExchangeRates()">Crypto Rates</a></li>
+            <li><a data-page="calc-page" class="menu" id="calc-page" href="#">Bitcoin Exchange</a></li>
+         </nav>
+      </section>
+
+
+      <section class="start-page page">
+         <h1>CRYPTONITE</h1>
+         <p class="subHeader">Powered by Bitmetrics</p>
+        
+         <p class="subHead2"> Offering both real-time and historic exchange rates in key world markets as well as current pricing of other popular cryptocurrencies</p>
+          <p class="subHead3">We are your source for all things Bitcoin </p>
+         <br />
+         <table border="5">
+            <tr>
+               <th colspan="2" class="firstValue">
+                  <br>
+               </th>
+            </tr>
+            <tr>
+               <td class="openday"> Price at market open:</td>
+               <td><span id="openday"></span></td>
+            </tr>
+            <tr>
+               <td class="highDay"> Today's high: </td>
+               <td><span id="todaysHigh"></span></td>
+            </tr>
+            <tr>
+               <td class="lowDay"> Today's low: </td>
+               <td><span id="todaysLow"></span></td>
+            </tr>
+            <tr>
+               <td class="marketCap"> Market Cap: </td>
+               <td><span id="marketCap"></span></td>
+            </tr>
+            <tr>
+               <td class="twentyfour"> 24 Hour Change: </td>
+               <td><span id="twentyfour"></span></td>
+            </tr>
+
+            <tr>
+               <td class="pctChange"> 24 Hour % Change: </td>
+               <td><span id="pctChange"></span></td>
+            </tr>
+            <tr>
+               <td class="supply"> Supply: </td>
+               <td><span id="supply"></span></td>
+            </tr>
+         </table>
+         <p class="buy">
+            To buy or sell Bitcoin, or to get a FREE WALLET, click <a href="https://www.bitcoin.com/choose-your-wallet/bitcoin-com-wallet">here</a>
+         </p>
+         <div class="disclaimer">
+            **All values listed in USD. To see Bitcoin's value in other markets, please visit our Bitcoin Exchange page by clicking the link above!**
+         </div>
+      </section>
+
+
+      <section class='history-page page'>
+         <form class="format" name="h-form" action="#" onsubmit="return false;">
+            <fieldset class="fSet">
+               <h2>LEGACY PRICING</h2>
+               <section class="subHead2" id="enterDates">Enter beginning and ending dates to view price change for the selected time frame</section>
+
+               <div class="inputs" id="inputs">
+                  <label for="start-date">Start Date:</label>
+                  <input type='text' pattern='[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])' name='startDate' class="search" id='startDate' placeholder="YYYY-MM-DD" title="date to begin search" required />
+                  <br />
+                  <label for="end-date">End Date: </label>
+                  <input type='text' pattern='[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])' name='endDate' class="search" id='endDate' placeholder="YYYY-MM-DD" title="date to end search" required />
+               </div>
+
+               <p class="difference" id="difference"></p>
+               <br />
+               <button class="buttons" id="btnSubmitDates" type="submit" onclick="fetchBitcoinHistoricData();">Enter</button>
+               <button class="buttons" id="btnResetDates" onclick="resetHistoricData()" hidden="hidden">Start Over</button>
+               <p class="press" id="press">Press enter to submit search.</p>
+            </fieldset>
+         </form>
+      </section>
+
+
+      <section class="crypto-page page">
+         <form class="format" name="cr-form" action="#" onsubmit="return false;">
+            <h3>CRYPTOCURRENCY EXCHANGE</h3>
+            <p class ="values">**All results are calculated in USD**</p>
+            <table border="5">
+               <tr>
+                  <th colspan="2" class="firstValue">
+                     <br>
+                  </th>
+               </tr>
+               <tr>
+                  <td class="LITE">LITE - Litecoin</td>
+                  <td><span id="Lite"></span></td>
+               </tr>
+               <tr>
+                  <td class="IOT">IOTA - Iota </td>
+                  <td><span id="IOT"></span></td>
+               </tr>
+               <tr>
+                  <td class="OMNI">ONMI - Omni </td>
+                  <td><span id="OMNI"></span></td>
+               </tr>
+               <tr>
+                  <td class="SWIFT">SWIFT - SwiftCoin </td>
+                  <td><span id="SWIFT"></span></td>
+               </tr>
+               <tr>
+                  <td class="BURST">BURST - BurstCoin </td>
+                  <td><span id="BURST"></span></td>
+               </tr>
+               <tr>
+                  <td class="XEM">XEM - Nemcoin</td>
+                  <td><span id="XEM"></span></td>
+               </tr>
+               <tr>
+                  <td class="WOLF">WOLF - InsanityCoin </td>
+                  <td><span id="WOLF"></span></td>
+               </tr>
+               <tr>
+                  <td class="POT">POT - PotCoin </td>
+                  <td><span id="POT"></span></td>
+               </tr>
+               <tr>
+                  <td class="ETH">ETH - Etherum </td>
+                  <td><span id="ETH"></span></td>
+               </tr>
+               <tr>
+                  <td class="SUP">SUP - Supcoin </td>
+                  <td><span id="SUP"></span></td>
+               </tr>
+               <tr>
+                  <td class="GEO">GEO - GeoCoin </td>
+                  <td><span id="GEO"></span></td>
+               </tr>
+               <tr>
+                  <td class="ETC">ETC - Ethereum Classic </td>
+                  <td><span id="ETC"></span></td>
+               </tr>
+               <tr>
+                  <td class="XRP">XRP - Ripple </td>
+                  <td><span id="XRP"></span></td>
+               </tr>
+            </table>
+         </form>
+      </section>
+
+
+      <section class='calc-page page'>
+         <form class="format" name="c-form" action="#" onsubmit="return false;">
+            <h4>WHAT'S IN YOUR WALLET?</h4>
+            <label for="bitcoinAmount" class="number" >Number of bitcoins to exchange:</label>
+            <input type='number' name='bitcoinAmount' id="bitcoinAmount" placeholder="0" title="Number of bitcoins to exchange" required/>
+            <button class="buttons" id="btnCalculateRates" type="submit" onclick="fetchBitcoinExchangeData();">Calculate</button>
+            <section class="exchangeOut" id="exchangeOutput">
+               <table border="5" class="exchangeOutput">
+                  <tr>
+                     <th colspan="2"><span class="exchangeRates">Market Exchange Rates<br></span>
+                     </th>
+                  </tr>
+                  <tr>
+                     <th>Market</th>
+                     <th>Value</th>
+                     <tr>
+                        <td>USD - United States Dollar</td>
+                        <td><span id="USD"></span></td>
+                     </tr>
+                     <tr>
+                        <td>GBP - Great British Pound</td>
+                        <td><span id="GBP"></span></td>
+                     </tr>
+                     <tr>
+                        <td>CNY - New Chinese Yen</td>
+                        <td><span id="CNY"></span></td>
+                     </tr>
+                     <tr>
+                        <td>JPY - Japanese Yen</td>
+                        <td><span id="JPY"></span></td>
+                     </tr>
+                     <tr>
+                        <td>EUR - Euro</td>
+                        <td><span id="EUR"></span></td>
+                     </tr>
+                     <tr>
+                        <td>TWD - Taiwanese Dollar</td>
+                        <td><span id="TWD"></span></td>
+                     </tr>
+                     <tr>
+                        <td>RUB - Russian Ruble</td>
+                        <td><span id="RUB"></span></td>
+                     </tr>
+                     <tr>
+                        <td>CHF - Swiss Franc</td>
+                        <td><span id="CHF"></span></td>
+                     </tr>
+                     <tr>
+                        <td>AUD - Australian Dollar</td>
+                        <td><span id="AUD"></span></td>
+                     </tr>
+               </table>
+            </section>
+            <p class="link">
+               To buy or sell Bitcoin, or to get a FREE WALLET, click <a href="https://www.bitcoin.com/choose-your-wallet/bitcoin-com-wallet">here</a>
+            </p>
+         </form>
+      </section>
+   </main>
+
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+   <script src="index.js"></script>
+   
+</body>
+
+</html>
