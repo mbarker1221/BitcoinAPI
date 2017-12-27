@@ -26,7 +26,6 @@ function resetHistoricData() {
    // Show and hide the specific HTML sections and buttons
    $("#enterDates").show();
    $("#difference").hide();
-
    $("#btnSubmitDates").show();
    $("#btnResetDates").hide();
 }
@@ -102,13 +101,7 @@ function showHistoricData(results) {
 
    // Show and hide the specific HTML sections
    $("#difference").show();
-   $("#enterDates").hide();
-   $("#inputs").hide();
-
-   $("#btnSubmitDates").hide();
    $("#btnResetDates").show();
-   $('#press').hide();
-
 
    $('.difference').text("The variance in the value of Bitcoin for the selected dates is:  $" + difference.toFixed(2));
 }
