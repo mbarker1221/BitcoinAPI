@@ -27,7 +27,6 @@
 
       <section class="start-page page">
          <h1>CRYPTONITE</h1>
-         <p class="subHeader">Powered by Bitmetrics</p>
 
          <p class="subHead2"> Offering both real-time and historic exchange rates in key world markets as well as current pricing of other popular cryptocurrencies</p>
          <p class="subHead3">We are your source for all things Bitcoin </p>
@@ -68,9 +67,7 @@
                <td><span id="supply"></span></td>
             </tr>
          </table>
-         <p class="buy">
-            To buy or sell Bitcoin, or to get a FREE WALLET, click <a href="https://www.bitcoin.com/choose-your-wallet/bitcoin-com-wallet">here</a>
-         </p>
+
          <div class="disclaimer">
             **All values listed in USD. To see Bitcoin's value in other markets, please visit our Bitcoin Exchange page by clicking the link above!**
          </div>
@@ -82,21 +79,20 @@
             <fieldset class="fSet">
                <h2>LEGACY PRICING</h2>
                <p class="press" id="enterDates">Enter beginning and ending dates to view difference in price for the selected time frame:</p>
-               <section class="histoPricing">
-                  <div class="inputs" id="inputs">
-                     <label for="start-date">Start Date:</label>
-                     <input type='text' pattern='[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])' name='startDate' class="search" id='startDate' placeholder="YYYY-MM-DD" title="date to begin search" required />
-                     <br />
-                     <label for="end-date">End Date: </label>
-                     <input type='text' pattern='[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])' name='endDate' class="search" id='endDate' placeholder="YYYY-MM-DD" title="date to end search" required />
-                  </div>
 
-                  <p class="difference" id="difference"></p>
+               <div class="inputs" id="inputs">
+                  <label for="start-date">Start Date:</label>
+                  <input type='text' pattern='[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])' name='startDate' class="search" id='startDate' placeholder="YYYY-MM-DD" title="date to begin search" required />
                   <br />
-                  <button class="buttons" id="btnSubmitDates" type="submit" onclick="fetchBitcoinHistoricData();">Enter</button>
-                  <button class="buttons" id="btnResetDates" onclick="resetHistoricData()" hidden="hidden">Start Over</button>
-                  <p class="subHead2" id="press">Press enter to submit search.</p>
-               </section>
+                  <label for="end-date">End Date: </label>
+                  <input type='text' pattern='[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])' name='endDate' class="search" id='endDate' placeholder="YYYY-MM-DD" title="date to end search" required />
+               </div>
+
+               <p class="difference" id="difference"></p>
+               <br />
+               <button class="buttons" id="btnSubmitDates" type="submit" onclick="fetchBitcoinHistoricData();">Enter</button>
+               <button class="buttons" id="btnResetDates" onclick="resetHistoricData()" hidden="hidden">Start Over</button>
+
             </fieldset>
          </form>
       </section>
@@ -105,7 +101,7 @@
       <section class="crypto-page page">
          <form class="format" name="cr-form" action="#" onsubmit="return false;">
             <h3>CRYPTOCURRENCY EXCHANGE</h3>
-            <p class="values">**All results are calculated in USD**</p>
+            <p class="press">**All results are calculated in USD**</p>
             <table border="5">
                <tr>
                   <th colspan="2" class="firstValue">
@@ -114,7 +110,7 @@
                </tr>
                <tr>
                   <td class="LITE">LITE - Litecoin</td>
-                  <td><span id="Lite"></span></td>
+                  <td><span id="lite"></span></td>
                </tr>
                <tr>
                   <td class="IOT">IOTA - Iota </td>
@@ -137,11 +133,11 @@
                   <td><span id="XEM"></span></td>
                </tr>
                <tr>
-                  <td class="WOLF">ZEC - Z-Cash </td>
+                  <td class="ZEC">ZEC - Z-Cash </td>
                   <td><span id="ZEC"></span></td>
                </tr>
                <tr>
-                  <td class="POT">BTG - Bitcoin Gold </td>
+                  <td class="BTG">BTG - Bitcoin Gold </td>
                   <td><span id="BTG"></span></td>
                </tr>
                <tr>
@@ -172,7 +168,7 @@
       <section class='calc-page page'>
          <form class="format" name="c-form" action="#" onsubmit="return false;">
             <h4>WHAT'S IN YOUR WALLET?</h4>
-            <label for="bitcoinAmount" class="number">Number of bitcoins to exchange:</label>
+            <label for="bitcoinAmount" class="number">Enter the number of bitcoins to exchange:</label>
             <input type='number' name='bitcoinAmount' id="bitcoinAmount" placeholder="0" title="Number of bitcoins to exchange" required/>
             <button class="buttons" id="btnCalculateRates" type="submit" onclick="fetchBitcoinExchangeData();">Calculate</button>
             <div class="exchangeOut" id="exchangeOutput">
@@ -222,7 +218,7 @@
                      </tr>
                </table>
             </div>
-            <p class="link">
+            <p class="buy">
                To buy or sell Bitcoin, or to get a FREE WALLET, click <a href="https://www.bitcoin.com/choose-your-wallet/bitcoin-com-wallet">here</a>
             </p>
          </form>

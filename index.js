@@ -115,7 +115,7 @@ function fetchCryptoExchangeRates() {
 
 function showCryptoExchangeRates(results) {
    let lite = results.LTC.USD;
-   $(`#Lite`).text("$" + lite.toFixed(2));
+   $(`#lite`).text("$" + lite.toFixed(2));
    let iot = results.IOT.USD;
    $(`#IOT`).text("$" + iot.toFixed(2));
    let omni = results.OMNI.USD;
@@ -126,7 +126,7 @@ function showCryptoExchangeRates(results) {
    $(`#QTUM`).text("$" + qtum.toFixed(2));
    let xem = results.XEM.USD;
    $(`#XEM`).text("$" + xem.toFixed(2));
-   let zec= results.ZEC.USD;
+   let zec = results.ZEC.USD;
    $(`#ZEC`).text("$" + zec.toFixed(2));
    let bch = results.BCH.USD;
    $(`#BCH`).text("$" + bch.toFixed(2));
