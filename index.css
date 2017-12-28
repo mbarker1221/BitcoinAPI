@@ -37,6 +37,7 @@ li a {
 
 li a:hover {
    color: red;
+   margin: auto 0;
 }
 
 .link {
@@ -44,6 +45,8 @@ li a:hover {
 }
 
 h1 {
+   margin-left: 20px;
+   margin-right: 20px;
    font-weight: 900;
    font-size: 58px;
    text-shadow: 1px 2px #8b0000;
@@ -55,14 +58,16 @@ h2 {
    font-size: 50px;
    text-shadow: 1px 1px #8b0000;
    font-family: Oswald Heavy;
+   text-decoration: underline;
 }
 
 h3 {
+   margin-top: 40px;
    font-weight: 600;
-   font-size: 40px;
+   font-size: 45px;
    text-shadow: 1px 1px #8b0000;
-   padding-bottom: 15px;
    font-family: Oswald Heavy;
+   text-decoration: underl;
 }
 
 h4 {
@@ -72,6 +77,7 @@ h4 {
 }
 
 .subHeader {
+   margin-top: -20px;
    font-size: 18px;
    color: black;
 }
@@ -79,7 +85,7 @@ h4 {
 .subHead2 {
    font-size: 22px;
    text-shadow: 1px 1px #007faa;
-   margin: 40px 70px;
+   margin: 40px 100px;
 }
 
 .subHead3 {
@@ -171,13 +177,15 @@ input:focus {
 }
 
 .press {
-   font-size: 25px;
+   font-size: 20px;
    text-shadow: .5px;
    text-decoration: italic;
+   margin-left: 80px;
+   margin-right: 80px;
 }
 
 .values {
-   padding-bottom: 20px;
+   padding-bottom: 10px;
 }
 
 .number {
