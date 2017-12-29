@@ -28,7 +28,7 @@
       <section class="start-page page">
          <h1>CRYPTONITE</h1>
 
-         <p class="subHead2"> Offering both real-time and historic exchange rates in key world markets as well as current pricing of other popular cryptocurrencies</p>
+         <p class="subheader"> Offering both real-time and historic exchange rates in key world markets as well as current pricing of other popular cryptocurrencies</p>
          <p class="subHead3">We are your source for all things Bitcoin </p>
          <br />
          <table border="5">
@@ -78,7 +78,7 @@
          <form class="format" name="h-form" action="#" onsubmit="return false;">
             <fieldset class="fSet">
                <h2>LEGACY PRICING</h2>
-               <p class="press" id="enterDates">Enter beginning and ending dates to view difference in price for the selected time frame:</p>
+               <p class="subheader" id="enterDates">Enter beginning and ending dates to view difference in price for the selected time frame:</p>
 
                <div class="inputs" id="inputs">
                   <label for="start-date">Start Date:</label>
@@ -92,6 +92,11 @@
                <br />
                <button class="buttons" id="btnSubmitDates" type="submit" onclick="fetchBitcoinHistoricData();">Enter</button>
                <button class="buttons" id="btnResetDates" onclick="resetHistoricData()" hidden="hidden">Start Over</button>
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
 
             </fieldset>
          </form>
@@ -168,7 +173,7 @@
       <section class='calc-page page'>
          <form class="format" name="c-form" action="#" onsubmit="return false;">
             <h4>WHAT'S IN YOUR WALLET?</h4>
-            <label for="bitcoinAmount" class="number">Enter the number of bitcoins to exchange:</label>
+            <p class="subheader">Enter the number of bitcoins to exchange:</p>
             <input type='number' name='bitcoinAmount' id="bitcoinAmount" placeholder="0" title="Number of bitcoins to exchange" required/>
             <button class="buttons" id="btnCalculateRates" type="submit" onclick="fetchBitcoinExchangeData();">Calculate</button>
             <div class="exchangeOut" id="exchangeOutput">

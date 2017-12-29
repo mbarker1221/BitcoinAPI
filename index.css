@@ -2,13 +2,10 @@ body {
    background: linear-gradient(to bottom, #d7ffc6, #fff);
    ;
    font-weight: 900;
-   font-size: 100%;
    position: static;
    background-size: cover;
    max-width: 100%;
-   padding-left: 5px;
    text-align: center;
-   padding-right: 5px;
    color: black;
 }
 
@@ -32,12 +29,10 @@ li a {
    color: white;
    font-size: 90%;
    display: block;
-   margin: auto 0;
 }
 
 li a:hover {
    color: red;
-   margin: auto 0;
 }
 
 .link {
@@ -49,49 +44,42 @@ h1 {
    margin-right: 20px;
    font-weight: 900;
    font-size: 45px;
-   text-shadow: 1px 2px #8b0000;
+   text-shadow: 1px 2px #007faa;
    font-family: Oswald Heavy;
 }
 
 h2 {
+   margin-top: 100px;
    font-weight: 900;
    font-size: 45px;
-   text-shadow: 1px 1px #8b0000;
+   text-shadow: 1px 1px #007faa;
    font-family: Oswald Heavy;
 }
 
 h3 {
-   margin-top: 20px;
+   margin-top: 10px;
    font-weight: 600;
    font-size: 45px;
-   text-shadow: 1px 1px #8b0000;
+   text-shadow: 1px 1px #007faa;
    font-family: Oswald Heavy;
-   text-decoration: underl;
 }
 
 h4 {
    font-size: 45px;
-   text-shadow: 1px 1px #8b0000;
+   text-shadow: 1px 1px #007faa;
    font-family: Oswald Heavy;
 }
 
-.subHeader {
-   margin-top: -20px;
-   font-size: 16px;
-   color: black;
-}
-
-.subHead2 {
+.subheader {
    font-size: 20px;
-   text-shadow: 1px 1px #007faa;
-   margin-left: 70px;
-   margin-right: 70px;
+
+   
 }
 
 .subHead3 {
-   font-size: 25px;
+   font-size: 30px;
    font-style: italic;
-   text-shadow: .5px 1px #8b0000;
+   text-shadow: .5px 1px #007faa;
    text-decoration: underline;
 }
 
@@ -125,7 +113,7 @@ fieldset {
 label {
    font-size: 20px;
    font-weight: 700;
-   text-shadow: 1px 1px #8b0000;
+   text-shadow: 1px 1px #007faa;
    margin-right: 5px;
 }
 
@@ -177,22 +165,15 @@ input:focus {
    text-shadow: 1px 1px #007faa;
 }
 
-.press {
-   font-size: 20px;
-   text-shadow: .5px;
-   text-decoration: italic;
-   margin-left: 80px;
-   margin-right: 80px;
+.fset {
+   border: none;
 }
+
 
 .values {
    padding-bottom: 10px;
 }
 
-.number {
-   font-size: 22px;
-   text-shadow: 1px 1px #007faa;
-}
 
 #bitcoinAmount {
    margin-left: 15px;
