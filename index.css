@@ -75,14 +75,14 @@ h4 {
 .subheader {
    font-size: 20px;
    padding-bottom: 20px;
-   padding-left: 100px;
-   padding-right: 100px;
+   margin-left: 100px;
+   margin-right: 100px;
 }
 
 .subheader2 {
    font-size: 20px;
-   padding-left: 60px;
-   padding-right: 60px;
+   margin-left: 100px;
+   margin-right: 100px;
 }
 
 .subHead3 {
