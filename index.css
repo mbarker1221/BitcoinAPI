@@ -49,7 +49,7 @@ h1 {
 }
 
 h2 {
-   margin-top: 100px;
+   margin-top: 70px;
    padding-bottom: 30px;
    font-weight: 900;
    font-size: 45px;
@@ -58,14 +58,15 @@ h2 {
 }
 
 h3 {
-   margin-top: 10px;
-   font-weight: 600;
+   margin-top: 20px;
+   font-weight: 900;
    font-size: 45px;
    text-shadow: 1px 1px #007faa;
    font-family: Oswald Heavy;
 }
 
 h4 {
+   font-weight: 900;
    font-size: 45px;
    text-shadow: 1px 1px #007faa;
    font-family: Oswald Heavy;
@@ -76,8 +77,12 @@ h4 {
    padding-bottom: 30px;
 }
 
+.subheader2 {
+   font-size: 20px;
+}
+
 .subHead3 {
-   font-size: 30px;
+   font-size: 25px;
    font-style: italic;
    text-shadow: .5px 1px #007faa;
    text-decoration: underline;
