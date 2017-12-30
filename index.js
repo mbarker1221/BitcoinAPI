@@ -102,6 +102,7 @@ function showHistoricData(results) {
    // Show and hide the specific HTML sections
    $("#difference").show();
    $("#btnResetDates").show();
+   $('#btnSubmitDates').hide();
 
    $('.difference').text("The variance in the value of Bitcoin for the selected dates is:  $" + difference.toFixed(2));
 }
@@ -135,7 +136,7 @@ function showCryptoExchangeRates(results) {
    let btg = results.BTG.USD;
    $(`#BTG`).text("$" + btg.toFixed(2));
    let geo = results.GEO.USD;
-   $(`#GEO`).text("$" + geo);
+   $(`#GEO`).text("$" + geo.toFixed(2));
    let etc = results.ETC.USD;
    $(`#ETC`).text("$" + etc);
    let xrp = results.XRP.USD;
@@ -161,10 +162,10 @@ function showBitcoinExchangeData(results) {
    $(`#GBP`).text("£" + gbp2.toFixed(2));
    let cny = results.CNY;
    let cny2 = (cny * amount);
-   $(`#CNY`).text("¥" + cny2.toFixed(2));
+   $(`#CNY`).text("¥" + cny2);
    let jpy = results.JPY;
    let jpy2 = (jpy * amount);
-   $(`#JPY`).text("¥" + jpy2.toFixed(2));
+   $(`#JPY`).text("¥" + jpy2);
    let eur = results.EUR;
    let eur2 = (eur * amount);
    $(`#EUR`).text("€" + eur2.toFixed(2));
