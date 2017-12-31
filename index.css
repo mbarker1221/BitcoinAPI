@@ -88,9 +88,6 @@ h4 {
    text-shadow: .5px 1px #007faa;
 }
 
-
-
-
 table {
    margin: 20px auto;
    padding: 10px;
@@ -120,10 +117,8 @@ fieldset {
 label {
    color: #8b0000;
    text-shadow: 1px 1px black;
-   
    font-size: 20px;
    font-weight: 700;
- 
    margin-right: 5px;
 }
 
@@ -162,10 +157,13 @@ input:focus {
    border-radius: 5px;
    border-color: #8b0000;
    opacity: .9;
-   margin: 20px 100px;
    padding: 10px;
    font-weight: 800;
    border: 7px ridge #007fAA;
+   max-width: 30%;
+   max-height: 30%;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .buy {
@@ -178,7 +176,7 @@ input:focus {
    margin-bottom: 100px;
 }
 
-.footer{
+.footer {
    margin-bottom: 100px;
 }
 
@@ -195,8 +193,6 @@ input:focus {
 .values {
    padding-bottom: 10px;
 }
-
-
 
 .exchangeRates {
    font-size: 20px;
