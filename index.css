@@ -2,14 +2,10 @@ body {
    background: linear-gradient(to bottom, #d7ffc6, #fff);
    ;
    font-weight: 900;
-   font-size: 100%;
    position: static;
    background-size: cover;
    max-width: 100%;
-   padding-left: 5px;
    text-align: center;
-   padding-right: 5px;
-   background-repeat: no-repeat;
    color: black;
 }
 
@@ -23,7 +19,7 @@ nav {
 
 nav li {
    float: left;
-   width: 24.8%;
+   width: 25%;
    text-align: center;
    margin: auto 0;
    margin-top: -5px;
@@ -33,12 +29,10 @@ li a {
    color: white;
    font-size: 90%;
    display: block;
-   margin: auto 0;
 }
 
 li a:hover {
    color: red;
-   margin: auto 0;
 }
 
 .link {
@@ -46,58 +40,61 @@ li a:hover {
 }
 
 h1 {
-   margin 0 0 auto;
+   margin-left: 20px;
+   margin-right: 20px;
    font-weight: 900;
-   font-size: 58px;
-   text-shadow: 1px 2px #8b0000;
+   font-size: 45px;
+   text-shadow: 1px 2px #007faa;
    font-family: Oswald Heavy;
 }
 
 h2 {
-   text-align: center;
+   margin-top: 70px;
+   padding-bottom: 25px;
    font-weight: 900;
-   font-size: 50px;
-   text-shadow: 1px 1px #8b0000;
+   font-size: 45px;
+   text-shadow: 1px 1px #007faa;
    font-family: Oswald Heavy;
 }
 
 h3 {
-   text-align: center;
-   font-weight: 600;
-   font-size: 40px;
-   text-shadow: 1px 1px #8b0000;
-   padding-bottom: 15px;
+   margin-top: 20px;
+   font-weight: 900;
+   font-size: 45px;
+   text-shadow: 1px 1px #007faa;
    font-family: Oswald Heavy;
 }
 
 h4 {
+   font-weight: 900;
    font-size: 45px;
-   text-shadow: 1px 1px #8b0000;
+   text-shadow: 1px 1px #007faa;
    font-family: Oswald Heavy;
 }
 
-.subHeader {
-   margin-top: -40px;
-   font-size: 18px;
-   color: black;
+.subheader {
+   font-size: 20px;
+   padding-bottom: 20px;
+   margin-left: 100px;
+   margin-right: 100px;
 }
 
-.subHead2 {
-   font-size: 22px;
-   text-shadow: 1px 1px #007faa;
-   margin: 40px 70px;
+.subheader2 {
+   font-size: 20px;
+   margin-left: 100px;
+   margin-right: 100px;
 }
 
 .subHead3 {
-   font-size: 38px;
+   font-size: 25px;
    font-style: italic;
-   text-shadow: .5px 1px #8b0000;
+   text-shadow: .5px 1px #007faa;
    text-decoration: underline;
 }
 
 table {
    margin: 20px auto;
-   padding: 15px;
+   padding: 10px;
    border-radius: 5px;
    font-weight: 800;
    background-color: #ffffff;
@@ -106,16 +103,16 @@ table {
 }
 
 th {
-   padding: 20px;
+   padding: 15px;
 }
 
 td {
-   padding: 10px;
+   padding: 8px;
 }
 
 form {
    font-weight: 800;
-   font-size: 20px;
+   font-size: 15px;
 }
 
 fieldset {
@@ -125,7 +122,7 @@ fieldset {
 label {
    font-size: 20px;
    font-weight: 700;
-   text-shadow: 1px 1px #8b0000;
+   text-shadow: 1px 1px #007faa;
    margin-right: 5px;
 }
 
@@ -163,6 +160,7 @@ input:focus {
    filter: alpha(opacity=60);
    border: 3px solid #007fAA;
    outline-color: invert;
+   border-radius: 5px;
 }
 
 .buy {
@@ -176,20 +174,12 @@ input:focus {
    text-shadow: 1px 1px #007faa;
 }
 
-.press {
-   font-size: 25px;
-   text-shadow: .5px;
-   text-decoration: italic;
+.fset {
+   border: none;
 }
 
 .values {
-   padding-bottom: 20px;
-}
-
-.number {
-   font-size: 22px;
-   text-shadow: 1px 1px #007faa;
-   margin-top: -30px;
+   padding-bottom: 10px;
 }
 
 #bitcoinAmount {
@@ -198,7 +188,7 @@ input:focus {
 }
 
 .exchangeRates {
-   font-size: 30px;
+   font-size: 20px;
    color: #8b0000;
    text-shadow: 1px 1px black;
 }

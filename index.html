@@ -27,10 +27,9 @@
 
       <section class="start-page page">
          <h1>CRYPTONITE</h1>
-         <p class="subHeader">Powered by Bitmetrics</p>
-        
-         <p class="subHead2"> Offering both real-time and historic exchange rates in key world markets as well as current pricing of other popular cryptocurrencies</p>
-          <p class="subHead3">We are your source for all things Bitcoin </p>
+
+         <p class="subheader"> Offering both real-time and historic exchange rates in key world markets as well as current pricing of other popular cryptocurrencies</p>
+         <p class="subHead3">This is your source for all things Bitcoin </p>
          <br />
          <table border="5">
             <tr>
@@ -68,9 +67,7 @@
                <td><span id="supply"></span></td>
             </tr>
          </table>
-         <p class="buy">
-            To buy or sell Bitcoin, or to get a FREE WALLET, click <a href="https://www.bitcoin.com/choose-your-wallet/bitcoin-com-wallet">here</a>
-         </p>
+
          <div class="disclaimer">
             **All values listed in USD. To see Bitcoin's value in other markets, please visit our Bitcoin Exchange page by clicking the link above!**
          </div>
@@ -81,7 +78,7 @@
          <form class="format" name="h-form" action="#" onsubmit="return false;">
             <fieldset class="fSet">
                <h2>LEGACY PRICING</h2>
-               <section class="subHead2" id="enterDates">Enter beginning and ending dates to view price change for the selected time frame</section>
+               <p class="subheader" id="enterDates">Enter beginning and ending dates to view difference in price for the selected time frame:</p>
 
                <div class="inputs" id="inputs">
                   <label for="start-date">Start Date:</label>
@@ -90,13 +87,15 @@
                   <label for="end-date">End Date: </label>
                   <input type='text' pattern='[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])' name='endDate' class="search" id='endDate' placeholder="YYYY-MM-DD" title="date to end search" required />
                </div>
-
-               <p class="difference" id="difference"></p>
                <br />
-               <button class="buttons" id="btnSubmitDates" type="submit" onclick="fetchBitcoinHistoricData();">Enter</button>
-               <button class="buttons" id="btnResetDates" onclick="resetHistoricData()" hidden="hidden">Start Over</button>
-               <p class="press" id="press">Press enter to submit search.</p>
-               
+               <br />
+
+               <p class="difference" id="difference" aria-live="assertive" hidden></p>
+               <br />
+               <button class="buttons" id="btnSubmitDates" type="submit" onclick="fetchBitcoinHistoricData();">Start Search</button>
+               <button class="buttons" id="btnResetDates" onclick="resetHistoricData()" hidden="hidden">New Search</button>
+               <br />
+               <br />
             </fieldset>
          </form>
       </section>
@@ -105,7 +104,7 @@
       <section class="crypto-page page">
          <form class="format" name="cr-form" action="#" onsubmit="return false;">
             <h3>CRYPTOCURRENCY EXCHANGE</h3>
-            <p class ="values">**All results are calculated in USD**</p>
+            <p class="subheader">**All results are calculated in USD**</p>
             <table border="5">
                <tr>
                   <th colspan="2" class="firstValue">
@@ -114,7 +113,7 @@
                </tr>
                <tr>
                   <td class="LITE">LITE - Litecoin</td>
-                  <td><span id="Lite"></span></td>
+                  <td><span id="lite"></span></td>
                </tr>
                <tr>
                   <td class="IOT">IOTA - Iota </td>
@@ -129,28 +128,28 @@
                   <td><span id="SWIFT"></span></td>
                </tr>
                <tr>
-                  <td class="BURST">BURST - BurstCoin </td>
-                  <td><span id="BURST"></span></td>
+                  <td class="QTUM">QTUM - QTUM </td>
+                  <td><span id="QTUM"></span></td>
                </tr>
                <tr>
                   <td class="XEM">XEM - Nemcoin</td>
                   <td><span id="XEM"></span></td>
                </tr>
                <tr>
-                  <td class="WOLF">WOLF - InsanityCoin </td>
-                  <td><span id="WOLF"></span></td>
+                  <td class="ZEC">ZEC - Z-Cash </td>
+                  <td><span id="ZEC"></span></td>
                </tr>
                <tr>
-                  <td class="POT">POT - PotCoin </td>
-                  <td><span id="POT"></span></td>
+                  <td class="BTG">BTG - Bitcoin Gold </td>
+                  <td><span id="BTG"></span></td>
                </tr>
                <tr>
                   <td class="ETH">ETH - Etherum </td>
                   <td><span id="ETH"></span></td>
                </tr>
                <tr>
-                  <td class="SUP">SUP - Supcoin </td>
-                  <td><span id="SUP"></span></td>
+                  <td class="BCH">BCH - Bitcoin Cash</td>
+                  <td><span id="BCH"></span></td>
                </tr>
                <tr>
                   <td class="GEO">GEO - GeoCoin </td>
@@ -172,10 +171,10 @@
       <section class='calc-page page'>
          <form class="format" name="c-form" action="#" onsubmit="return false;">
             <h4>WHAT'S IN YOUR WALLET?</h4>
-            <label for="bitcoinAmount" class="number" >Number of bitcoins to exchange:</label>
+            <p class="subheader2">Enter the number of bitcoins to exchange:</p>
             <input type='number' name='bitcoinAmount' id="bitcoinAmount" placeholder="0" title="Number of bitcoins to exchange" required/>
             <button class="buttons" id="btnCalculateRates" type="submit" onclick="fetchBitcoinExchangeData();">Calculate</button>
-            <section class="exchangeOut" id="exchangeOutput">
+            <div class="exchangeOut" id="exchangeOutput">
                <table border="5" class="exchangeOutput">
                   <tr>
                      <th colspan="2"><span class="exchangeRates">Market Exchange Rates<br></span>
@@ -221,8 +220,8 @@
                         <td><span id="AUD"></span></td>
                      </tr>
                </table>
-            </section>
-            <p class="link">
+            </div>
+            <p class="buy">
                To buy or sell Bitcoin, or to get a FREE WALLET, click <a href="https://www.bitcoin.com/choose-your-wallet/bitcoin-com-wallet">here</a>
             </p>
          </form>
@@ -231,7 +230,7 @@
 
    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
    <script src="index.js"></script>
-   
+
 </body>
 
 </html>
