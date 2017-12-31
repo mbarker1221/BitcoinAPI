@@ -102,10 +102,7 @@ function showHistoricData(results) {
    // Show and hide the specific HTML sections
    $("#difference").show();
    $("#btnResetDates").show();
-<<<<<<< HEAD
-=======
    $('#btnSubmitDates').hide();
->>>>>>> 927263a0c9699af396017ff70a450d8c8c262c7c
 
    $('.difference').text("The variance in the value of Bitcoin for the selected dates is:  $" + difference.toFixed(2));
 }
@@ -130,7 +127,7 @@ function showCryptoExchangeRates(results) {
    $(`#QTUM`).text("$" + qtum.toFixed(2));
    let xem = results.XEM.USD;
    $(`#XEM`).text("$" + xem.toFixed(2));
-   let zec = results.ZEC.USD;
+   let zec= results.ZEC.USD;
    $(`#ZEC`).text("$" + zec.toFixed(2));
    let bch = results.BCH.USD;
    $(`#BCH`).text("$" + bch.toFixed(2));

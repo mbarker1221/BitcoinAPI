@@ -1,6 +1,6 @@
-Cryptonite - An app for tracking Bitcoin and other cryptocurrencies
+BITCOIN - THE STATE OF THE COIN
 
-this app tracks data about Bitcoin such as current price, market open price, high and low for the current day, and dollar and percent change in pricing within the past 24 hours as well as market caps and current supply.  Data for several other popular cryptocurrencies is also available and is converted in USD. Each user search renders up to the minute data. Functionality also includes calculating Bitcoin exchange rates in USD as well as in several other world markets, a search option for determining Bitcoin price changes based on user-entered time paramenters, and links to buy and sell Bitcoin.  
+an app for real-time tracking of Bitcoin's price fluctuations, as well as that of other popular cryptocurrencies.  Functionality also includes ability calculate value of bitcoins in several other world markets, a search option for determining price changes based on user-entered time paramenters, links to buy and sell bitcoin, and a link to receive a free wallet.  
 
 
 technologies used:  CSS, HTML, JAVASCRIPT, JQUERY
