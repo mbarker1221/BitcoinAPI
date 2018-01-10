@@ -1,100 +1,161 @@
+* {
+   box-sizing: border-box;
+}
+
+html {
+   overflow-y: scroll;
+}
+
 body {
-   /* background: linear-gradient(to bottom, #d7ffc6, #fff);*/
-   background-image: url("https://thumbs.dreamstime.com/z/blockchain-blurred-white-background-d-illustration-83377792.jpg");
-   font-weight: 900;
+   background-image: url("http://4vector.com/i/free-vector-abstract-background-technology_133729_abstract_background_technology.jpg");
+   font-weight: 800;
    position: static;
-   background-size: cover;
-   max-width: 100%;
+   background-size: 100%;
+   width: 100%;
    text-align: center;
    color: black;
+   background-repeat: repeat-y;
 }
 
-li {
-   list-style: none;
-   float: left;
-   width: 25%;
-   text-align: center;
-   padding-top: 20px;
+.icon {
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 90%;
+   margin-bottom: 20px;
 }
 
-nav {
-   height: 45px;
-   background-color: black;
-   margin: auto 0;
-   width: 100%;
-   padding-bottom: 10px;
+.sidenav {
+   height: 100%;
+   max-width: 130px;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   background-color: #111;
+   transition: 0.5s;
+   padding-top: 10px;
+   font-size: 100%;
 }
 
-nav li {
-   float: left;
-   width: 25%;
-   text-align: center;
-   margin: auto 0;
-   margin-top: -5px;
-}
-
-li a {
-   color: white;
+.sidenav a {
+   padding-top: 30px;
+   text-decoration: none;
    font-size: 90%;
+   color: white;
    display: block;
+   transition: 0.3s;
+   padding-right: 5px;
+   padding-left: 5px;
+   font-size: 100%;
 }
 
-li a:hover {
-   color: red;
+.sidenav a:hover {
+   color: #ff2519;
+}
+
+#main {
+   transition: margin-left .5s;
+}
+
+@media screen and (max-width: 450px) and (mid-width: 320px) {
+   .sidenav {
+      padding-top: 15px;
+      font-size: 80%;
+      padding-left: 5px;
+      padding-right: 5px;
+   }
+   .sidenav a {
+      font-size: 80%;
+      padding-left: 5px;
+      padding-right: 5px;
+   }
+   table {
+      margin-left: 15px;
+      margin-right: 15px;
+   }
+}
+
+@media screen and (max-width: 699px) and (min-width: 460px) {
+   .sidenav {
+      padding-top: 15px;
+      font-size: 80%;
+      padding-left: 5px;
+      padding-right: 5px;
+   }
+   .sidenav a {
+      font-size: 80%;
+      padding-left: 5px;
+      padding-right: 5px;
+   }
+   table {
+      margin-left: 15px;
+      margin-right: 15px;
+   }
+}
+
+@media screen and (max-width: 768px) and (min-width: 700px) {
+   .sidenav {
+      padding-top: 15px;
+      font-size: 80%;
+      padding-left: 5px;
+      padding-right: 5px;
+   }
+   .sidenav a {
+      font-size: 80%;
+      padding-left: 5px;
+      padding-right: 5px;
+   }
+   table {
+      margin-left: 15px;
+      margin-right: 15px;
+   }
 }
 
 .link {
    font-size: 20px;
+   color: white;
 }
 
 h1 {
-   margin-left: auto;
-   margin-right: auto;
+   margin: 10px auto;
    font-weight: 900;
    font-size: 45px;
-   text-shadow: 1px 2px #8b0000;
+   text-shadow: 1px 1px #ff2519;
    font-family: Oswald Heavy;
 }
 
-h2 {
-   font-weight: 900;
-   font-size: 45px;
-   text-shadow: 1px 1px #8b0000;
-   font-family: Oswald Heavy;
-}
-
-h3 {
-   font-weight: 900;
-   font-size: 45px;
-   text-shadow: 1px 1px #8b0000;
-   font-family: Oswald Heavy;
-}
-
-h4 {
-   font-weight: 900;
-   font-size: 45px;
-   text-shadow: 1px 1px #8b0000;
-   font-family: Oswald Heavy;
-}
-
-.subheader {
-   font-size: 25px;
-   font-style: italic;
-   text-shadow: .5px 1px #007faa;
-}
-
-.subheader2 {
+.subheader1 {
    font-size: 20px;
-   text-shadow: .5px 1px #007faa;
+   font-weight: 700;
+   font-style: italic;
+}
+.subheader2 {
+   font-size: 25px;
+   font-weight: 900;
+   text-shadow: 2px 2px white;
+}
+
+.transbox {
+   background-color: #262626;
+   filter: alpha(opacity=90);
+   outline-color: invert;
+   border-radius: 6px;
+   padding: 10px;
+   font-weight: 800;
+   border: 7px ridge #007fAA;
+   max-width: 500px;
+   margin: 10px auto;
 }
 
 table {
    margin: 20px auto;
    padding: 10px;
-   border-radius: 5px;
+   border-radius: 6px;
    font-weight: 800;
-   background-color: #ffffff;
-   border: 5px solid #007fAA;
+   background-color: #262626;
+   border: 5px ridge #007fAA;
+   max-width: 600px;
+   color: white;
 }
 
 th {
@@ -123,7 +184,7 @@ label {
 }
 
 input {
-   margin: 20px auto;
+   margin: 5px auto;
    text-align: center;
    border-radius: 5px;
    font-size: 15px;
@@ -135,7 +196,7 @@ input:focus {
 }
 
 .buttons {
-   border-radius: 5px;
+   border-radius: 6px;
 }
 
 .buttons:hover {
@@ -146,48 +207,13 @@ input:focus {
 .firstValue {
    font-size: 25px;
    padding: 15px;
-   color: #8b0000;
-   text-shadow: 1px 1px black;
-}
-
-.transbox {
-   background-color: #ffffff;
-   filter: alpha(opacity=80);
-   outline-color: invert;
-   border-radius: 5px;
-   border-color: #8b0000;
-   opacity: .9;
-   padding: 10px;
-   font-weight: 800;
-   border: 7px ridge #007fAA;
-   max-width: 30%;
-   max-height: 30%;
-   margin-left: auto;
-   margin-right: auto;
+   color: #ff2519;
+   text-shadow: .5px 1px black;
 }
 
 .buy {
    font-size: 20px;
    color: #8b0000;
-   margin-bottom: 100px;
-}
-
-.crypto {
-   margin-bottom: 100px;
-}
-
-.footer {
-   margin-bottom: 100px;
-}
-
-.difference {
-   text-decoration: italic;
-   font-size: 20px;
-   text-shadow: 1px 1px #007faa;
-}
-
-.fset {
-   border: none;
 }
 
 .values {
@@ -196,6 +222,22 @@ input:focus {
 
 .exchangeRates {
    font-size: 20px;
-   color: #8b0000;
+   color: #ff2519;
    text-shadow: 1px 1px black;
 }
+
+.thumb {
+   display: inline-block;
+   max-width: 200px;
+   max-height: 200px;
+   color: white;
+}
+
+.title {
+   color: white;
+}
+
+#btnCalculateRates {
+   display: inline;
+}
+

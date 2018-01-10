@@ -1,8 +1,7 @@
 const crypto = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,LTC,ETH,QTUM,GEO,BTG,ETC,XRP,SWIFT,OMNI,IOT,XEM,DASH,BCH,ZEC&tsyms=USD&extraParams=your_app_name";
 const starts = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC&tsyms=USD";
-const histo = "https://api.coindesk.com/v1/bpi/historical/close.json";
 const calcExchange = "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD,GBP,CNY,JPY,EUR,TWD,JPY,RUB,CHF,CAD,AUD,SGD";
-
+const news = "https://newsapi.org/v2/top-headlines?q=bitcoin&sortBy=popularity&language=en&apiKey=29b9b388e7c142329c131bb139ff5429"
 
 function handleNavigation() {
    // select nav elements on"click'
@@ -18,16 +17,14 @@ function handleNavigation() {
    });
 }
 
-// Clear form values
-function resetHistoricData() {
-   $("#startDate").val('');
-   $("#endDate").val('');
+function openNav() {
+   document.getElementById("mySidenav").style.width = "15%";
+   document.getElementById("main").style.marginLeft = "15%";
+}
 
-   // Show and hide the specific HTML sections and buttons
-   $("#enterDates").show();
-   $("#difference").hide();
-   $("#btnSubmitDates").show();
-   $("#btnResetDates").hide();
+function closeNav() {
+   document.getElementById("mySidenav").style.width = "0";
+   document.getElementById("main").style.marginLeft = "0";
 }
 
 // Clear form values
@@ -74,39 +71,6 @@ function showFirstValueOnScreenLoad(results) {
    $(`#marketCap`).text(marketCap.toFixed(1));
 }
 
-function fetchBitcoinHistoricData() {
-   const startField = $('input[name=startDate]');
-   const endField = $('input[name=endDate]');
-
-   const startDate = startField.val();
-   const endDate = endField.val();
-
-   let params = {
-      start: startDate,
-      end: endDate
-   };
-
-   $.getJSON(histo, params, function(data) {
-      showHistoricData(data);
-   });
-}
-
-function showHistoricData(results) {
-   let firstKey, firstValue, lastKey, lastValue, difference;
-   firstKey = Object.keys(results.bpi).shift();
-   lastKey = Object.keys(results.bpi).pop();
-   firstValue = Object.values(results.bpi).shift();
-   lastValue = Object.values(results.bpi).pop();
-   difference = (lastValue - firstValue);
-
-   // Show and hide the specific HTML sections
-   $("#difference").show();
-   $("#btnResetDates").show();
-   $('#btnSubmitDates').hide();
-
-   $('.difference').text("The variance in the value of Bitcoin for the selected dates is:  $" + difference.toFixed(2));
-}
-
 // Get cryptocurrency exchange rates
 function fetchCryptoExchangeRates() {
    $.getJSON(crypto, function(data) {
@@ -127,7 +91,7 @@ function showCryptoExchangeRates(results) {
    $(`#QTUM`).text("$" + qtum.toFixed(2));
    let xem = results.XEM.USD;
    $(`#XEM`).text("$" + xem.toFixed(2));
-   let zec= results.ZEC.USD;
+   let zec = results.ZEC.USD;
    $(`#ZEC`).text("$" + zec.toFixed(2));
    let bch = results.BCH.USD;
    $(`#BCH`).text("$" + bch.toFixed(2));
@@ -148,7 +112,7 @@ function fetchBitcoinExchangeData() {
    const amountValue = amount.val();
 
    $.getJSON(calcExchange, function(data) {
-      showBitcoinExchangeData(data)()
+      showBitcoinExchangeData(data)
    })
 }
 
@@ -191,9 +155,50 @@ function renderExchangeResults() {
    showBitcoinExchangeData(data);
 }
 
+function showNewsPage() {
+   $('.start-page').hide();
+   $('.history-page').hide();
+   $('.crypto-page').hide();
+   $('.calc-page').hide();
+   $('.news-page').show();
+   getNews();
+}
+
+function getNews() {
+   $.getJSON(news, function(data) {
+      showNews(data);
+   });
+}
+
+function showNews(results) {
+   let article = `
+   
+   <a class="link" href="${results.articles[0].urlToImage}" target="_blank"><img class="thumb" src="${results.articles[0].urlToImage}"></a><br />
+   
+   <a class="title" href="${results.articles[0].url}" target="_blank">${results.articles[0].title}<alt="${results.articles[0].description}"></a><br /><br /><br />
+   
+   
+   <a class="link" href="${results.articles[1].urlToImage}" target="_blank"><img class="thumb" src="${results.articles[1].urlToImage}"></a><br />
+   
+   <a class="title" href="${results.articles[1].url}" target="_blank">${results.articles[1].title} <alt="${results.articles[1].description}"></a><br /><br /><br />
+   
+ 
+   <a class="link" href="${results.articles[2].urlToImage}" target="_blank"><img class="thumb" src="${results.articles[2].urlToImage}"></a><br />
+   
+   <a class="title" href="${results.articles[2].url}" target="_blank">${results.articles[2].title}<alt="${results.articles[2].description}"></a><br /><br /><br />
+ 
+ 
+   <a class="link" href="${results.articles[3].urlToImage}" target="_blank"><img class="thumb" src="${results.articles[3].urlToImage}"></a><br />
+   
+   <a class="title" href="${results.articles[3].url}" target="_blank">${results.articles[3].title}<alt="${results.articles[3].description}"></a><br /><br />
+   
+   `;
+   $('.stories').html(article);
+}
 // On load event:
 $(() => {
    setEventListeners();
    fetchOnScreenLoad();
    showStartPage();
+   openNav();
 })
