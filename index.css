@@ -34,30 +34,35 @@ body {
    background-color: #111;
    transition: 0.5s;
    padding-top: 10px;
-   font-size: 100%;
+   
 }
 
 .sidenav a {
    padding-top: 30px;
    text-decoration: none;
-   font-size: 90%;
+   font-size: 80%;
    color: white;
    display: block;
    transition: 0.3s;
    padding-right: 5px;
    padding-left: 5px;
-   font-size: 100%;
+   font-size: 90%;
+
 }
 
 .sidenav a:hover {
    color: #ff2519;
 }
 
+.sidenav a:active {
+   color: blue;
+}
+
 #main {
    transition: margin-left .5s;
 }
 
-@media screen and (max-width: 450px) and (mid-width: 320px) {
+@media screen and (max-width: 450px) and (min-width: 320px) {
    .sidenav {
       padding-top: 15px;
       font-size: 80%;
@@ -70,12 +75,12 @@ body {
       padding-right: 5px;
    }
    table {
-      margin-left: 15px;
-      margin-right: 15px;
+      margin-left: 5px;
+      margin-right: 5px;
    }
 }
 
-@media screen and (max-width: 699px) and (min-width: 460px) {
+@media screen and (max-width: 699px) and (min-width: 451px) {
    .sidenav {
       padding-top: 15px;
       font-size: 80%;
@@ -88,8 +93,8 @@ body {
       padding-right: 5px;
    }
    table {
-      margin-left: 15px;
-      margin-right: 15px;
+      margin-left: 10px;
+      margin-right: 10px;
    }
 }
 
@@ -130,30 +135,28 @@ h1 {
    font-style: italic;
 }
 .subheader2 {
-   font-size: 25px;
+   font-size: 20px;
    font-weight: 900;
    text-shadow: 2px 2px white;
 }
 
 .transbox {
    background-color: #262626;
-   filter: alpha(opacity=90);
-   outline-color: invert;
    border-radius: 6px;
    padding: 10px;
    font-weight: 800;
    border: 7px ridge #007fAA;
-   max-width: 500px;
+   max-width: 600px;
    margin: 10px auto;
 }
 
 table {
-   margin: 20px auto;
+   margin: 10px auto;
    padding: 10px;
    border-radius: 6px;
    font-weight: 800;
    background-color: #262626;
-   border: 5px ridge #007fAA;
+   border: 7px ridge #007fAA;
    max-width: 600px;
    color: white;
 }
@@ -184,7 +187,6 @@ label {
 }
 
 input {
-   margin: 5px auto;
    text-align: center;
    border-radius: 5px;
    font-size: 15px;
@@ -209,15 +211,6 @@ input:focus {
    padding: 15px;
    color: #ff2519;
    text-shadow: .5px 1px black;
-}
-
-.buy {
-   font-size: 20px;
-   color: #8b0000;
-}
-
-.values {
-   padding-bottom: 10px;
 }
 
 .exchangeRates {

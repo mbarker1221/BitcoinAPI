@@ -7,10 +7,12 @@
    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css" rel="stylesheet">
    <link href="index.css" rel="stylesheet" type="text/css">
    <link href="https://fonts.googleapis.com/css?family=Nunito:300i" rel="stylesheet">
+   <link href="accounting.js" type="text/javascript">
+
    <title>Bitcoin data tracker, exchange calculator and news feed</title>
 </head>
-
 <body>
+
    <div id="mySidenav" class="sidenav">
       <nav role="navigation" class="nav-bar" id="nav-start">
          <img class="icon" alt="Bitcoin Logo" src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRbsSS0Vl5PjZP3gh_TRX8SwrJgs2f3OWPV5QcBMHYaSavFkG9uNcRKwT_1K-h134bEjFK-dsE&usqp=CAE" />
@@ -66,7 +68,7 @@
 
       <section class="crypto-page page">
          <h1>CRYPTO TRACKER</h1>
-         <p class="subheader2">Results calculated in USD</p>
+         <p class="subheader2">Results shown in USD</p>
          <form class="format" name="cr-form" action="#" onsubmit="return false;">
             <table border="5" class="crypto">
                <tr>
@@ -122,12 +124,12 @@
          </form>
       </section>
 
-      <section class='calc-page page'>
+      <section class="calc-page page">
          <h1>YOUR WALLET</h1>
 
          <p class="subheader2">Number of bitcoins to exchange:</p>
          <form class="format" name="c-form" action="#" onsubmit="return false;">
-            <input type='number' name='bitcoinAmount' id="bitcoinAmount" placeholder="0" title="Number of bitcoins to exchange" required/>
+            <input type="number" name="bitcoinAmount" id="bitcoinAmount" placeholder="0" title="Number of bitcoins to exchange" required/>
             <button class="buttons" id="btnCalculateRates" type="submit" onclick="fetchBitcoinExchangeData();">Calculate</button>
          </form>
          <main role="main" aria-live="polite">
@@ -178,14 +180,11 @@
                </tr>
             </table>
          </main>
-         <p class="buy">
-            To buy or sell Bitcoin, or to get a FREE WALLET, click <a href="https://www.bitcoin.com/choose-your-wallet/bitcoin-com-wallet">here</a>
-         </p>
       </section>
 
       <section class="news-page page">
          <h1>NEWS</h1>
-         <p class="subheader1">Today's Top Finance Headlines</p>
+         <p class="subheader1">Today's Bitcoin News</p>
          <form class="format" name="n-form" action="#" onsubmit="return false;">
             <div class="stories transbox">
             </div>
@@ -195,6 +194,7 @@
       <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
       <script src="index.js"></script>
    </div>
+   
 </body>
 
 </html>
