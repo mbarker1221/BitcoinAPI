@@ -90,7 +90,7 @@ body {
 
 @media screen and (max-width: 699px) and (min-width: 460px) {
    .sidenav {
-      font-size: 5%
+      font-size: 5%;
       padding-top: 15px;
       padding-left: 2px;
       padding-right: 2px;
