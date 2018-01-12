@@ -32,7 +32,6 @@ body {
    background-color: #111;
    transition: 0.5s;
    padding-top: 10px;
-   font-size: 90%;
 }
 
 .sidenav a {
@@ -44,7 +43,7 @@ body {
    transition: 0.3s;
    padding-right: 5px;
    padding-left: 5px;
-   font-size: 90%;
+   font-size: 100%;
 }
 
 .sidenav a:focus {
