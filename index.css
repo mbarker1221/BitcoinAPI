@@ -37,7 +37,6 @@ body {
 .sidenav a {
    padding-top: 30px;
    text-decoration: none;
-   font-size: 10%;
    color: white;
    display: block;
    transition: 0.3s;
@@ -60,7 +59,7 @@ body {
 
 @media screen and (max-width: 450px) and (mid-width: 320px) {
    .sidenav {
-      font-size: 30%;
+      font-size: 1%;
       padding-top: 15px;
       padding-left: 5px;
       padding-right: 5px;
