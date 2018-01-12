@@ -32,8 +32,8 @@ body {
    background-color: #111;
    transition: 0.5s;
    padding-top: 10px;
-   font-size:100%;
-   overflow:hidden;
+   font-size: 100%;
+   overflow: hidden;
 }
 
 .sidenav a {
@@ -44,8 +44,8 @@ body {
    transition: 0.5s;
    padding-right: 5px;
    padding-left: 5px;
-   font-size:100%;
-   overflow:hidden;
+   font-size: 100%;
+   overflow: hidden;
 }
 
 .sidenav a:focus {
@@ -66,14 +66,14 @@ body {
       padding-top: 15px;
       padding-left: 2px;
       padding-right: 2px;
-      overflow:hidden;
+      overflow: hidden;
    }
    
    .sidenav a {
       padding-left: 2px;
       padding-right: 2px;
       font-size: 3%;
-      overflow:hidden;
+      overflow: hidden;
    }
    
    table {
@@ -94,13 +94,13 @@ body {
       padding-top: 15px;
       padding-left: 2px;
       padding-right: 2px;
-      overflow:hidden;
+      overflow: hidden;
    }
    .sidenav a {
       font-size: 5%;
       padding-left: 2px;
       padding-right: 2px;
-      overflow:hidden;
+      overflow: hidden;
    }
    table {
       margin-left: auto;
@@ -114,13 +114,13 @@ body {
       padding-top: 15px;
       padding-left: 3px;
       padding-right: 3px;
-      overflow:hidden;
+      overflow: hidden;
    }
    .sidenav a {
       font-size: 30%;
       padding-left: 3px;
       padding-right: 3px;
-      overflow:hidden;
+      overflow: hidden;
    }
    table {
       margin-left: auto;
