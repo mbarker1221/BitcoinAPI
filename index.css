@@ -32,7 +32,7 @@ body {
    background-color: #111;
    transition: 0.5s;
    padding-top: 10px;
-   font-size: 80%;
+   font-size: 75%;
    overflow: hidden;
 }
 
@@ -44,7 +44,7 @@ body {
    transition: 0.5s;
    padding-right: 5px;
    padding-left: 5px;
-   font-size: 80%;
+   font-size: 75%;
    overflow: hidden;
 }
 
