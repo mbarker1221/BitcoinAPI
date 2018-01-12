@@ -28,7 +28,7 @@ function resetBitcoinExchange() {
    $("#bitcoinAmount").val('');
    $("#btnCalculateRates").show();
 }
-//show landing page
+//show start page
 function showStartPage() {
    $(".page").hide();
    $(".start-page").show();
@@ -44,23 +44,36 @@ function fetchOnScreenLoad() {
    });
 }
 
+//convert api retrieved data to currency format
+Number.prototype.formatMoney = function(c, d, t) {
+    var n = this,
+        c = isNaN(c = Math.abs(c)) ? 2 : c,
+        d = d == undefined ? "." : d,
+        t = t == undefined ? "," : t,
+        s = n < 0 ? "-" : "",
+        i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))),
+        j = (j = i.length) > 3 ? j % 3 : 0;
+        
+    return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+};
+
 function showFirstValueOnScreenLoad(results) {
    var firstValue = results.RAW.BTC.USD.PRICE;
-   $(`.firstValue`).text("Bitcoin current value: $" + firstValue.toFixed(2));
+   $(`.firstValue`).text("Bitcoin current value: $" + firstValue.formatMoney(2));
    let openday = results.RAW.BTC.USD.OPENDAY;
-   $(`#openday`).text("$" + openday.toFixed(2));
+  $(`#openday`).text("$" + openday.formatMoney(2));
    let todaysHigh = results.RAW.BTC.USD.HIGHDAY;
-   $(`#todaysHigh`).text("$" + todaysHigh.toFixed(2));
+   $(`#todaysHigh`).text("$" + todaysHigh.formatMoney(2));
    let todaysLow = results.RAW.BTC.USD.LOWDAY;
-   $(`#todaysLow`).text("$" + todaysLow.toFixed(2));
+   $(`#todaysLow`).text("$" + todaysLow.formatMoney(2));
    let twentyfour = results.RAW.BTC.USD.CHANGEDAY;
-   $(`#twentyfour`).text("$" + twentyfour.toFixed(2));
+   $(`#twentyfour`).text("$" + twentyfour.formatMoney(2));
    let pctChange = results.RAW.BTC.USD.CHANGEPCTDAY;
    $(`#pctChange`).text(pctChange.toFixed(2) + "%");
    let supply = results.RAW.BTC.USD.SUPPLY;
    $(`#supply`).text(supply);
    let marketCap = results.RAW.BTC.USD.MKTCAP;
-   $(`#marketCap`).text(marketCap.toFixed(1));
+   $(`#marketCap`).text(marketCap.toFixed(0));
 }
 
 // Get cryptocurrency exchange rates from api and display 
@@ -72,31 +85,31 @@ function fetchCryptoExchangeRates() {
 
 function showCryptoExchangeRates(results) {
    let lite = results.LTC.USD;
-   $(`#lite`).text("$" + lite.toFixed(2));
+   $(`#lite`).text("$" + lite.formatMoney(2));
    let iot = results.IOT.USD;
-   $(`#IOT`).text("$" + iot.toFixed(2));
+   $(`#IOT`).text("$" + iot.formatMoney(2));
    let omni = results.OMNI.USD;
-   $(`#OMNI`).text("$" + omni);
+   $(`#OMNI`).text("$" + omni.formatMoney(2));
    let swift = results.SWIFT.USD;
-   $(`#SWIFT`).text("$" + swift.toFixed(2));
+   $(`#SWIFT`).text("$" + swift.formatMoney(2));
    let qtum = results.QTUM.USD;
-   $(`#QTUM`).text("$" + qtum.toFixed(2));
+   $(`#QTUM`).text("$" + qtum.formatMoney(2));
    let xem = results.XEM.USD;
-   $(`#XEM`).text("$" + xem.toFixed(2));
+   $(`#XEM`).text("$" + xem.formatMoney(2));
    let zec = results.ZEC.USD;
-   $(`#ZEC`).text("$" + zec.toFixed(2));
+   $(`#ZEC`).text("$" + zec.formatMoney(2));
    let bch = results.BCH.USD;
-   $(`#BCH`).text("$" + bch.toFixed(2));
+   $(`#BCH`).text("$" + bch.formatMoney(2));
    let eth = results.ETH.USD;
-   $(`#ETH`).text("$" + eth);
+   $(`#ETH`).text("$" + eth.formatMoney(2));
    let btg = results.BTG.USD;
-   $(`#BTG`).text("$" + btg.toFixed(2));
+   $(`#BTG`).text("$" + btg.formatMoney(2));
    let geo = results.GEO.USD;
-   $(`#GEO`).text("$" + geo.toFixed(2));
+   $(`#GEO`).text("$" + geo.formatMoney(2));
    let etc = results.ETC.USD;
-   $(`#ETC`).text("$" + etc);
+   $(`#ETC`).text("$" + etc.formatMoney(2));
    let xrp = results.XRP.USD;
-   $(`#XRP`).text("$" + xrp);
+   $(`#XRP`).text("$" + xrp.formatMoney(2));
 }
 //get and display exchange rate data using user-supplied params
 function fetchBitcoinExchangeData() {
@@ -112,7 +125,7 @@ function showBitcoinExchangeData(results) {
    const amount = $("input[name=bitcoinAmount]").val();
    let usd = results.USD;
    let usd2 = (usd * amount);
-   $(`#USD`).text("$" + usd2.toFixed(2));
+   $(`#USD`).text("$" + usd2.formatMoney(2));
    let gbp = results.GBP;
    let gbp2 = (gbp * amount);
    $(`#GBP`).text("£" + gbp2.toFixed(2));
@@ -127,16 +140,16 @@ function showBitcoinExchangeData(results) {
    $(`#EUR`).text("€" + eur2.toFixed(2));
    let twd = results.TWD;
    let twd2 = (twd * amount);
-   $(`#TWD`).text("$" + twd2.toFixed(2));
+   $(`#TWD`).text("$" + twd2.formatMoney(2));
    let rub = results.RUB;
    let rub2 = (rub * amount);
    $(`#RUB`).text("₽" + rub2.toFixed(2));
    let chf = results.CHF;
    let chf2 = (chf * amount);
-   $(`#CHF`).text("$" + chf2.toFixed(2));
+   $(`#CHF`).text("$" + chf2.formatMoney(2));
    let aud = results.AUD;
    let aud2 = (aud * amount);
-   $(`#AUD`).text("$" + aud2.toFixed(2));
+   $(`#AUD`).text("$" + aud2.formatMoney(2));
    renderExchangeResults()
 }
 //clear out value of input box
@@ -158,7 +171,7 @@ function getNews() {
       showNews(data);
    });
 }
-//render news thumbnails to page
+//render news thumbnails/titles to page
 function showNews(results) {
    let article = `
    
@@ -190,4 +203,5 @@ $(() => {
    fetchOnScreenLoad();
    showStartPage();
    openNav();
+   $("body").removeClass("preload");
 })

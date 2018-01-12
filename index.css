@@ -18,15 +18,14 @@ body {
 }
 
 .icon {
-   margin-left: auto;
-   margin-right: auto;
+   margin-left: 0 auto;
+   margin-right: 0 auto;
    max-width: 90%;
-   margin-bottom: 20px;
+   
 }
 
 .sidenav {
    height: 100%;
-   
    position: fixed;
    z-index: 1;
    top: 0;
@@ -40,12 +39,17 @@ body {
 .sidenav a {
    padding-top: 30px;
    text-decoration: none;
+   font-size: 90%;
    color: white;
    display: block;
    transition: 0.3s;
    padding-right: 5px;
    padding-left: 5px;
-   font-size: 100%;
+   font-size: 80%;
+}
+
+.sidenav a:focus {
+   color: #007faa;
 }
 
 .sidenav a:hover {
@@ -53,7 +57,7 @@ body {
 }
 
 #main {
-   transition: margin-left .5s;
+   transition: margin-left 1s;
 }
 
 @media screen and (max-width: 450px) and (mid-width: 320px) {
@@ -95,7 +99,6 @@ body {
 @media screen and (max-width: 768px) and (min-width: 700px) {
    .sidenav {
       padding-top: 15px;
-      font-size: 80%;
       padding-left: 5px;
       padding-right: 5px;
    }
@@ -140,8 +143,9 @@ h1 {
    padding: 10px;
    font-weight: 800;
    border: 7px ridge #007fAA;
-   max-width: 500px;
-   margin: 20px auto;
+   max-width: 600px;
+   margin: 10px auto;
+   transition: margin-left, 1s;
 }
 
 table {
@@ -153,6 +157,7 @@ table {
    border: 5px ridge #007fAA;
    max-width: 600px;
    color: white;
+   transition: margin-left, 1s;
 }
 
 th {
@@ -236,5 +241,12 @@ input:focus {
 
 #btnCalculateRates {
    display: inline;
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
 }
 
