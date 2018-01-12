@@ -56,6 +56,9 @@ body {
    color: #ff2519;
 }
 
+.sidenav a:active {
+   color: #007faa;
+}
 #main {
    transition: margin-left 1s;
 }
@@ -68,7 +71,7 @@ body {
       padding-right: 5px;
    }
    .sidenav a {
-      font-size: 70%;
+      font-size: 80%;
       padding-left: 5px;
       padding-right: 5px;
    }
@@ -103,7 +106,7 @@ body {
       padding-right: 5px;
    }
    .sidenav a {
-      font-size: 80%;
+      font-size: 90%;
       padding-left: 5px;
       padding-right: 5px;
    }
@@ -244,9 +247,11 @@ input:focus {
 }
 
 .preload * {
-  -webkit-transition: none !important;
+ /* -webkit-transition: none !important;
   -moz-transition: none !important;
   -ms-transition: none !important;
-  -o-transition: none !important;
+  -o-transition: none !important;*/
+   transition: margin-left 1s;
+
 }
 
