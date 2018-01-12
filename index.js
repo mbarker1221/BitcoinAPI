@@ -159,7 +159,6 @@ function renderExchangeResults() {
 
 function showNewsPage() {
    $(".start-page").hide();
-   $(".history-page").hide();
    $(".crypto-page").hide();
    $(".calc-page").hide();
    $(".news-page").show();
