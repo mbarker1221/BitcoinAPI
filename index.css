@@ -83,7 +83,7 @@ body {
     h1 { 
       font-size: 30px;
       font-weight: 900;
-      text-shadow: 1px 1px #FF2519
+      text-shadow: 1px 1px #FF2519;
       font-family: Oswald Heavy;
    }
 }
