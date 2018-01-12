@@ -110,14 +110,14 @@ body {
 
 @media screen and (max-width: 768px) and (min-width: 700px) {
    .sidenav {
-      font-size: 20%;
+      font-size: 30%;
       padding-top: 15px;
       padding-left: 3px;
       padding-right: 3px;
       overflow:hidden;
    }
    .sidenav a {
-      font-size: 20%;
+      font-size: 30%;
       padding-left: 3px;
       padding-right: 3px;
       overflow:hidden;
