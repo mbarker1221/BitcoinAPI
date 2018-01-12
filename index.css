@@ -20,8 +20,7 @@ body {
 .icon {
    margin-left: 0 auto;
    margin-right: 0 auto;
-   max-width: 90%;
-   
+   max-width: 90%;  
 }
 
 .sidenav {
@@ -33,7 +32,7 @@ body {
    background-color: #111;
    transition: 0.5s;
    padding-top: 10px;
-   font-size: 60%;
+   font-size: 90%;
 }
 
 .sidenav a {
@@ -66,7 +65,6 @@ body {
 @media screen and (max-width: 450px) and (mid-width: 320px) {
    .sidenav {
       padding-top: 15px;
-      font-size: 70%;
       padding-left: 5px;
       padding-right: 5px;
    }
@@ -84,12 +82,11 @@ body {
 @media screen and (max-width: 699px) and (min-width: 460px) {
    .sidenav {
       padding-top: 15px;
-      font-size: 70%;
       padding-left: 5px;
       padding-right: 5px;
    }
    .sidenav a {
-      font-size: 90%;
+      font-size: 80%;
       padding-left: 5px;
       padding-right: 5px;
    }
@@ -157,7 +154,7 @@ table {
    border-radius: 6px;
    font-weight: 800;
    background-color: #262626;
-   border: 5px ridge #007fAA;
+   border: 7px ridge #007fAA;
    max-width: 600px;
    color: white;
    transition: margin-left, 1s;
@@ -215,12 +212,6 @@ input:focus {
    color: #ff2519;
    text-shadow: .5px 1px black;
 }
-
-.buy {
-   font-size: 20px;
-   color: #8b0000;
-}
-
 .values {
    padding-bottom: 10px;
 }
