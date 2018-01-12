@@ -10,7 +10,7 @@ body {
    background-image: url("http://4vector.com/i/free-vector-abstract-background-technology_133729_abstract_background_technology.jpg");
    font-weight: 800;
    position: static;
-   background-size: 100%;
+   background-size: cover;
    width: 100%;
    text-align: center;
    color: black;
@@ -47,22 +47,20 @@ body {
 }
 
 .sidenav a:focus {
-   color: #007faa;
+   color: #007FAA;
 }
 
 .sidenav a:hover {
    color: #ff2519;
 }
 
-.sidenav a:active {
-   color: #007faa;
-}
 #main {
    transition: margin-left 1s;
 }
 
 @media screen and (max-width: 450px) and (mid-width: 320px) {
    .sidenav {
+      font-size: 80%;
       padding-top: 15px;
       padding-left: 5px;
       padding-right: 5px;
@@ -80,6 +78,7 @@ body {
 
 @media screen and (max-width: 699px) and (min-width: 460px) {
    .sidenav {
+      font-size: 80%
       padding-top: 15px;
       padding-left: 5px;
       padding-right: 5px;
@@ -97,6 +96,7 @@ body {
 
 @media screen and (max-width: 768px) and (min-width: 700px) {
    .sidenav {
+      font-size: 90%;
       padding-top: 15px;
       padding-left: 5px;
       padding-right: 5px;
