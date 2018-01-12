@@ -44,6 +44,8 @@ body {
    transition: 0.3s;
    padding-right: 5px;
    padding-left: 5px;
+   font-size:90%;
+   overflow:hidden;
 }
 
 .sidenav a:focus {
@@ -72,6 +74,7 @@ body {
       padding-left: 5px;
       padding-right: 5px;
        font-size: 4%;
+   overflow:hidden;
    }
    table {
       margin-left: 15px;
@@ -91,6 +94,7 @@ body {
       font-size: 5%;
       padding-left: 5px;
       padding-right: 5px;
+   overflow:hidden;
    }
    table {
       margin-left: 15px;
@@ -110,6 +114,7 @@ body {
       font-size: 10%;
       padding-left: 5px;
       padding-right: 5px;
+   overflow:hidden;
    }
    table {
       margin-left: 15px;
