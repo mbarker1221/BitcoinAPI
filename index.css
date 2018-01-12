@@ -37,13 +37,12 @@ body {
 .sidenav a {
    padding-top: 30px;
    text-decoration: none;
-   font-size: 90%;
+   font-size: 80%;
    color: white;
    display: block;
    transition: 0.3s;
    padding-right: 5px;
    padding-left: 5px;
-   font-size: 90%;
 }
 
 .sidenav a:focus {
@@ -60,13 +59,13 @@ body {
 
 @media screen and (max-width: 450px) and (mid-width: 320px) {
    .sidenav {
-      font-size: 60%;
+      font-size: 40%;
       padding-top: 15px;
       padding-left: 5px;
       padding-right: 5px;
    }
    .sidenav a {
-      font-size: 60%;
+      font-size: 40%;
       padding-left: 5px;
       padding-right: 5px;
    }
@@ -78,13 +77,13 @@ body {
 
 @media screen and (max-width: 699px) and (min-width: 460px) {
    .sidenav {
-      font-size: 70%
+      font-size: 60%
       padding-top: 15px;
       padding-left: 5px;
       padding-right: 5px;
    }
    .sidenav a {
-      font-size: 70%;
+      font-size: 60%;
       padding-left: 5px;
       padding-right: 5px;
    }
