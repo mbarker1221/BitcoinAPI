@@ -62,7 +62,7 @@ body {
 
 @media screen and (max-width: 450px) and (mid-width: 320px) {
    .sidenav {
-      font-size: 4%;
+      font-size: 3%;
       padding-top: 15px;
       padding-left: 5px;
       padding-right: 5px;
@@ -73,8 +73,8 @@ body {
       
       padding-left: 5px;
       padding-right: 5px;
-       font-size: 4%;
-   overflow:hidden;
+      font-size: 3%;
+      overflow:hidden;
    }
    table {
       margin-left: 15px;
@@ -84,17 +84,17 @@ body {
 
 @media screen and (max-width: 699px) and (min-width: 460px) {
    .sidenav {
-      font-size: 5%
+      font-size: 4%
       padding-top: 15px;
       padding-left: 5px;
       padding-right: 5px;
       overflow:hidden;
    }
    .sidenav a {
-      font-size: 5%;
+      font-size: 4%;
       padding-left: 5px;
       padding-right: 5px;
-   overflow:hidden;
+      overflow:hidden;
    }
    table {
       margin-left: 15px;
@@ -104,17 +104,17 @@ body {
 
 @media screen and (max-width: 768px) and (min-width: 700px) {
    .sidenav {
-      font-size: 10%;
+      font-size: 7%;
       padding-top: 15px;
       padding-left: 5px;
       padding-right: 5px;
       overflow:hidden;
    }
    .sidenav a {
-      font-size: 10%;
+      font-size: 7%;
       padding-left: 5px;
       padding-right: 5px;
-   overflow:hidden;
+      overflow:hidden;
    }
    table {
       margin-left: 15px;
