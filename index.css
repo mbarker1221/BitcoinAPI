@@ -236,12 +236,4 @@ input:focus {
    display: inline;
 }
 
-.preload * {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
-   transition: margin-left 1s;
-
-}
 
