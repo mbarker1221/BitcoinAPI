@@ -174,7 +174,7 @@ function getNews() {
 function showNews(results) {
    let article = `
    
-   <a class="link" href="${results.articles[0].urlToImage}" target="_blank"><img class="thumb" src="${results.articles[0].urlToImage}"></a><br />
+   <a class="link" href="${results.articles[0].url}" target="_blank"><img class="thumb" src="${results.articles[0].urlToImage}"></a><br />
    
    <a class="title" href="${results.articles[0].url}" target="_blank">${results.articles[0].title}<alt="${results.articles[0].description}"></a><br /><br /><br />
    
@@ -184,7 +184,7 @@ function showNews(results) {
    <a class="title" href="${results.articles[1].url}" target="_blank">${results.articles[1].title} <alt="${results.articles[1].description}"></a><br /><br /><br />
    
  
-   <a class="link" href="${results.articles[2].urlToImage}" target="_blank"><img class="thumb" src="${results.articles[2].urlToImage}"></a><br />
+   <a class="link" href="${results.articles[2].url}" target="_blank"><img class="thumb" src="${results.articles[2].urlToImage}"></a><br />
    
    <a class="title" href="${results.articles[2].url}" target="_blank">${results.articles[2].title}<alt="${results.articles[2].description}"></a><br /><br /><br />
  
