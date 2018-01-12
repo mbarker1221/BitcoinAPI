@@ -130,18 +130,18 @@ body {
 h1 {
    margin: 10px auto;
    font-weight: 900;
-   font-size: 45px;
+   font-size: 40px;
    text-shadow: 1px 1px #ff2519;
    font-family: Oswald Heavy;
 }
 
 .subheader1 {
-   font-size: 20px;
+   font-size: 16px;
    font-weight: 700;
    font-style: italic;
 }
 .subheader2 {
-   font-size: 25px;
+   font-size: 20px;
    font-weight: 900;
    text-shadow: 2px 2px white;
 }
