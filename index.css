@@ -32,7 +32,7 @@ body {
    background-color: #111;
    transition: 0.5s;
    padding-top: 10px;
-   font-size: 70%;
+   font-size: 80%;
    overflow: hidden;
 }
 
@@ -44,7 +44,7 @@ body {
    transition: 0.5s;
    padding-right: 5px;
    padding-left: 5px;
-   font-size: 70%;
+   font-size: 80%;
    overflow: hidden;
 }
 
@@ -62,7 +62,7 @@ body {
 
 @media screen and (max-width: 450px) and (mid-width: 320px) {
    .sidenav {
-      font-size: 3%;
+      font-size: 2%;
       padding-top: 15px;
       padding-left: 2px;
       padding-right: 2px;
@@ -72,7 +72,7 @@ body {
    .sidenav a {
       padding-left: 2px;
       padding-right: 2px;
-      font-size: 3%;
+      font-size: 2%;
       overflow: hidden;
    }
    
@@ -90,14 +90,14 @@ body {
 
 @media screen and (max-width: 699px) and (min-width: 460px) {
    .sidenav {
-      font-size: 5%;
+      font-size: 3%;
       padding-top: 15px;
       padding-left: 2px;
       padding-right: 2px;
       overflow: hidden;
    }
    .sidenav a {
-      font-size: 5%;
+      font-size: 3;
       padding-left: 2px;
       padding-right: 2px;
       overflow: hidden;
