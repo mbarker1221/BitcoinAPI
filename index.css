@@ -8,14 +8,10 @@ html {
 
 body {
    background: 
-   url("https://4vector.com/i/free-vector-abstract-background-technology_133729_abstract_background_technology.jpg");
-   background-size: cover;
+   url("https://4vector.com/i/free-vector-abstract-background-technology_133729_abstract_background_technology.jpg") #70def4 center no-repeat fixed;
    font-weight: 800;
-   position: fixed;
-   width: 100%;
-   text-align: center;
    color: black;
-   background-color: #70def4
+   text-align: center;
 }
 
 .icon {
