@@ -54,10 +54,13 @@ body {
    color: #ff2519;
 }
 
-#main {
+.page {
    transition: margin-left 1s;
 }
 
+#main {
+   transition: margin-left 1s;
+}
 
 @media screen and (max-width: 450px) and (min-width: 320px) {
    .sidenav {
