@@ -94,7 +94,7 @@ body {
    .sidenav a {
       padding-left: 3px;
       padding-right: 3px;
-       font-size: 4%;
+      font-size: 4%;
    }
    table {
       margin-left: 10px;
@@ -152,12 +152,12 @@ h1 {
    font-weight: 800;
    border: 7px ridge #007fAA;
    max-width: 600px;
-   margin: 10px auto;
+   margin: 15px auto;
    transition: margin-left, 1s;
 }
 
 table {
-   margin: 10px auto;
+   margin: 15px auto;
    padding: 10px;
    border-radius: 6px;
    font-weight: 800;
