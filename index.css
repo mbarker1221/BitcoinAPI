@@ -58,23 +58,7 @@ body {
    transition: margin-left 1s;
 }
 
-Skip to content
- 
-Search…
-All gists
-GitHub
-New gist
-@mbarker1221 
-  Star 0
-  Fork 0@kevintaverakevintavera/media queries for tablet, mobile and desktop Secret
-Created 4 minutes ago • 
-Report gist
-Embed  
-<script src="https://gist.github.com/kevintavera/d7b20ec74e6417cc02526ee667a3d628.js"></script>
-  Download ZIP
- Code  Revisions 1
-Raw
- media queries for tablet, mobile and desktop
+
 @media screen and (max-width: 450px) and (min-width: 320px) {
    .sidenav {
       padding-top: 15px;
