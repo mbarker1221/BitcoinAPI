@@ -10,7 +10,7 @@ body {
    background-image: url("https://4vector.com/i/free-vector-abstract-background-technology_133729_abstract_background_technology.jpg");
    font-weight: 800;
    position: static;
-   background-size: cover;
+   background-size: 100%;
    width: 100%;
    text-align: center;
    color: black;
@@ -20,7 +20,8 @@ body {
 .icon {
    margin-left: 0 auto;
    margin-right: 0 auto;
-   max-width: 60%;  
+   max-width: 90%;
+   
 }
 
 .sidenav {
@@ -32,117 +33,108 @@ body {
    background-color: #111;
    transition: 0.5s;
    padding-top: 10px;
-   font-size: 80%;
-   overflow: hidden;
+   overflow:hidden;
+   
 }
 
 .sidenav a {
    padding-top: 30px;
    text-decoration: none;
+   font-size: 90%;
    color: white;
    display: block;
-   transition: 0.5s;
+   transition: 0.3s;
    padding-right: 5px;
    padding-left: 5px;
-   font-size: 80%;
-   overflow: hidden;
+   overflow:hidden;
 }
 
 .sidenav a:focus {
-   color: #007FAA;
+   color: #007faa;
 }
 
 .sidenav a:hover {
    color: #ff2519;
 }
 
+.sidenav a:active {
+   color: #007faa;
+}
+
 #main {
-   transition: margin-left .5s;
+   transition: margin-left 1s;
 }
 
-@media screen and (max-width: 450px) and (mid-width: 320px) {
+@media screen and (max-width: 450px) and (min-width: 320px) {
    .sidenav {
-      font-size: 2%;
       padding-top: 15px;
-      padding-left: 2px;
-      padding-right: 2px;
-      overflow: hidden;
+      padding-left: 5px;
+      padding-right: 5px;
+      font-size: 4%;
    }
-   
    .sidenav a {
-      padding-left: 2px;
-      padding-right: 2px;
-      font-size: 2%;
-      overflow: hidden;
+      padding-left: 5px;
+      padding-right: 5px;
+       font-size: 4%;
    }
-   
    table {
-      margin-left: auto;
-      margin-right: auto;
-   }
-    h1 { 
-      font-size: 20%;
-      font-weight: 900;
-      text-shadow: 1px 1px #FF2519;
-      font-family: Oswald Heavy;
+      margin-left: 5px;
+      margin-right: 5px;
    }
 }
 
-@media screen and (max-width: 699px) and (min-width: 460px) {
+@media screen and (max-width: 699px) and (min-width: 451px) {
    .sidenav {
-      font-size: 3%;
       padding-top: 15px;
-      padding-left: 2px;
-      padding-right: 2px;
-      overflow: hidden;
+      padding-left: 5px;
+      padding-right: 5px;
+      font-size: 4%;
    }
    .sidenav a {
-      font-size: 3;
-      padding-left: 2px;
-      padding-right: 2px;
-      overflow: hidden;
+      padding-left: 5px;
+      padding-right: 5px;
+       font-size: 4%;
    }
    table {
-      margin-left: auto;
-      margin-right: auto;
+      margin-left: 10px;
+      margin-right: 10px;
    }
 }
 
 @media screen and (max-width: 768px) and (min-width: 700px) {
    .sidenav {
-      font-size: 30%;
       padding-top: 15px;
-      padding-left: 3px;
-      padding-right: 3px;
-      overflow: hidden;
+      padding-left: 5px;
+      padding-right: 5px;
+      font-size: 10%
    }
    .sidenav a {
-      font-size: 30%;
-      padding-left: 3px;
-      padding-right: 3px;
-      overflow: hidden;
+      padding-left: 5px;
+      padding-right: 5px;
+       font-size: 10%;
    }
    table {
-      margin-left: auto;
-      margin-right: auto;
+      margin-left: 15px;
+      margin-right: 15px;
    }
 }
 
 .link {
    font-size: 20px;
    color: white;
+  
 }
 
 h1 {
    margin: 10px auto;
    font-weight: 900;
-   font-size: 40px;
+   font-size: 45px;
    text-shadow: 1px 1px #ff2519;
    font-family: Oswald Heavy;
 }
 
 .subheader1 {
-   font-size: 16px;
+   font-size: 20px;
    font-weight: 700;
    font-style: italic;
 }
@@ -159,12 +151,12 @@ h1 {
    font-weight: 800;
    border: 7px ridge #007fAA;
    max-width: 600px;
-   margin: 20px auto;
-   transition: margin-left, .5s;
+   margin: 10px auto;
+   transition: margin-left, 1s;
 }
 
 table {
-   margin: 20px auto;
+   margin: 10px auto;
    padding: 10px;
    border-radius: 6px;
    font-weight: 800;
@@ -172,15 +164,15 @@ table {
    border: 7px ridge #007fAA;
    max-width: 600px;
    color: white;
-   transition: margin-left, .5s;
+   transition: margin-left, 1s;
 }
 
 th {
-   padding: 5px;
+   padding: 15px;
 }
 
 td {
-   padding: 4px;
+   padding: 8px;
 }
 
 form {
@@ -201,7 +193,6 @@ label {
 }
 
 input {
-   margin: 5px auto;
    text-align: center;
    border-radius: 5px;
    font-size: 15px;
@@ -223,12 +214,9 @@ input:focus {
 
 .firstValue {
    font-size: 25px;
-   padding: 10px;
+   padding: 15px;
    color: #ff2519;
    text-shadow: .5px 1px black;
-}
-.values {
-   padding-bottom: 10px;
 }
 
 .exchangeRates {
@@ -252,4 +240,12 @@ input:focus {
    display: inline;
 }
 
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+   transition: margin-left 1s;
+
+}
 
