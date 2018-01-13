@@ -7,15 +7,14 @@ html {
 }
 
 body {
-   background-image: url("https://4vector.com/i/free-vector-abstract-background-technology_133729_abstract_background_technology.jpg");
-   font-weight: 800;
-   position: static;
+   background: 
+   url("https://4vector.com/i/free-vector-abstract-background-technology_133729_abstract_background_technology.jpg");
    background-size: cover;
+   font-weight: 800;
+   position: fixed;
    width: 100%;
    text-align: center;
    color: black;
-   background-repeat: no-repeat;
-   background-color: black;
 }
 
 .icon {
@@ -72,7 +71,7 @@ body {
    .sidenav a {
       padding-left: 2px;
       padding-right: 2px;
-       font-size: 3%;
+      font-size: 3%;
    }
    table {
       margin-left: 5px;
@@ -108,7 +107,7 @@ body {
    .sidenav a {
       padding-left: 5px;
       padding-right: 5px;
-       font-size: 10%;
+      font-size: 10%;
    }
    table {
       margin-left: 10px;
