@@ -186,8 +186,9 @@ input {
 }
 
 input:focus {
-   background-color: #007faa;
+   background-color: #00ace6;
    color: white;
+   text-shadow: .5px 1px black
 }
 
 .buttons {
@@ -195,8 +196,9 @@ input:focus {
 }
 
 .buttons:hover {
-   background-color: #007faa;
+   background-color: #4dd2ff;
    color: white;
+   text-shadow: .5px 1px black
 }
 
 .firstValue {
@@ -207,16 +209,15 @@ input:focus {
 }
 
 .exchangeRates {
-   font-size: 20px;
+   font-size: 25px;
    color: #ff2519;
-   text-shadow: 1px 1px black;
+   text-shadow: .5px 1px #007faa;
 }
 
 .thumb {
    display: inline-block;
    max-width: 200px;
    max-height: 200px;
-   color: white;
 }
 
 .title {
@@ -228,9 +229,19 @@ input:focus {
 }
 
 .preload * {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
-   transition: margin-left 1s;
+  -webkit-transition-property: margin-left, !important;
+  -webkit-transition-duration: .5s, !important;
+  -webkit-transition-property: ease-in, !important;
+  
+  -moz-transition-property: margin-left, !important;
+  -moz-transition-duration: .5s, !important;
+  -moz-transition-property: ease-in, !important;
+  
+  -o-transition-property: margin-left, !important;
+  -o-transition-duration: .5s, !important;
+  -o-transition-property: ease-in, !important;
+
+  -ms-transition-property: margin-left, !important;
+  -ms-transition-duration: .5s, !important;
+  -ms-transition-property: ease-in, !important;
 }
